@@ -9,6 +9,12 @@ Setup
     $ vagrant up
     $ ansible -m raw sudo yum install python-simplejson
 
+Add this lines to `$HOME/.ssh/config`    
+
+    Host 192.168.33.*
+      IdentityFile ~/.vagrant.d/insecure_private_key
+      User vagrant
+
 Run
 ----
 
