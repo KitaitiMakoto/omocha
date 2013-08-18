@@ -1,0 +1,22 @@
+---
+- name: install perl
+  yum: name=perl state=present
+- name: install cpanm
+  shell: which cpanm || curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+- name: intall carton
+  shell: which carton || cpanm Carton
+- name: transfer movabletype
+  copy: src=MT-5_2_7.zip dest=/tmp/
+- name: install movabletype
+  shell: unzip /tmp/MT-5_2_7.zip && mv -f /tmp/MT-5.2.7/* /var/www/html/ chdir=/tmp creates=/var/www/html/index.html
+- name: write mt-config.cgi
+  template: src=mt-config.cgi dest=/var/www/html/mt-config.cgi
+- copy: src=cpanfile dest=/var/www/html/cpanfile
+- copy: src=cpanfile.snapshot dest=/var/www/html/cpanfile.snapshot
+- yum: name=zlib-devel state=present
+- yum: name=expat-devel state=present
+- yum: name=libxml2-devel state=present
+- yum: name=libxslt-devel state=present
+- yum: name=mysql-devel state=present
+- name: install cpan modules
+  shell: carton install --deployment chdir=/var/www/html

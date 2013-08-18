@@ -1,0 +1,49 @@
+requires 'CGI';
+requires 'Image::Size';
+requires 'File::Spec';
+requires 'CGI::Cookie';
+requires 'LWP::UserAgent';
+
+requires 'DBI';
+requires 'DBD::mysql';
+
+requires 'Digest::SHA';
+requires 'Plack';
+requires 'CGI::PSGI';
+requires 'CGI::Parse::PSGI';
+requires 'XMLRPC::Transport::HTTP::Plack';
+requires 'HTML::Entities';
+requires 'HTML::Parser';
+requires 'SOAP::Lite';
+requires 'File::Temp';
+requires 'Scalar::Util';
+requires 'List::Util';
+# requires 'Image::Magick';
+requires 'IPC::Run';
+requires 'Storable';
+requires 'Crypt::DSA';
+requires 'Crypt::SSLeay';
+requires 'Cache::File';
+requires 'MIME::Base64';
+requires 'XML::Atom';
+requires 'Cache::Memcached';
+requires 'Archive::Tar';
+requires 'IO::Compress::Gzip';
+requires 'IO::Uncompress::Gunzip';
+requires 'Archive::Zip';
+requires 'XML::SAX';
+requires 'Digest::SHA1';
+requires 'Net::SMTP';
+requires 'Authen::SASL';
+requires 'Net::SMTP::SSL';
+requires 'Net::SMTP::TLS';
+requires 'IO::Socket::SSL';
+requires 'Net::SSLeay';
+requires 'Safe';
+requires 'Digest::MD5';
+requires 'Text::Balanced';
+requires 'XML::Parser';
+
+requires 'CGI::Compile';
+
+requires 'Starman';
