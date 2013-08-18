@@ -4,3 +4,9 @@
   yum: name=mysql-server state=present
 - name: ensure mysql is running
   service: name=mysqld enabled=yes state=started
+- name: install MySQL-python
+  yum: name=MySQL-python state=present
+- name: create mysql database
+  mysql_db: name=mt state=present
+- name: create mysql user
+  mysql_user: name=mt login_user=mt password={{ mysql_password }} priv=mt.*:ALL login_user=root login_password={{ mysql_root_password }}

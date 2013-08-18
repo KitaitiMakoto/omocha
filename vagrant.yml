@@ -1,7 +1,10 @@
 ---
-- hosts: webservers
+- hosts: all
   user: vagrant
   sudo: yes
+  vars:
+    mysql_root_password: ""
+    mysql_password: mtpassword
   roles:
     - webservers
     - dbservers

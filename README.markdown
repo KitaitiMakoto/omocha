@@ -7,7 +7,7 @@ Setup
     $ pip install ansible
     $ gem install serverspec
     $ vagrant up
-    $ ansible -m raw sudo yum install python-simplejson
+    $ vagrant ssh -- sudo yum -y install python-simplejson
 
 Add these lines to `$HOME/.ssh/config`    
 
