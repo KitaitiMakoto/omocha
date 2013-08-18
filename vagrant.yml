@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  user: vagrant
+  sudo: yes
+  roles:
+    - webservers
