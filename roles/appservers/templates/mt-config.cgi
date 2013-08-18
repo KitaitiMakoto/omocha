@@ -12,13 +12,15 @@
 ################################################################
 
 # The CGIPath is the URL to your Movable Type directory
-CGIPath    /mt
+CGIPath    http://movabletype.vagrant/cgi-bin/mt/
 
 # The StaticWebPath is the URL to your mt-static directory
 # Note: Check the installation documentation to find out 
 # whether this is required for your environment.  If it is not,
 # simply remove it or comment out the line by prepending a "#".
 StaticWebPath    /mt-static
+
+PidFilePath      /var/www/tools/mt.pid
 
 #================ DATABASE SETTINGS ==================
 #   CHANGE setting below that refer to databases 
