@@ -15,5 +15,5 @@ end
 
 describe file('/etc/httpd/conf/httpd.conf') do
   it { should be_file }
-  it { should contain "ServerName default" }
+  it { should contain "ServerName movabletype.vagrant" }
 end

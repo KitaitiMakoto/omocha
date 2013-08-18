@@ -982,10 +982,10 @@ BrowserMatch "^Dreamweaver-WebDAV-SCM1" redirect-carefully
 # The first VirtualHost section is used for requests without a known
 # server name.
 #
-#<VirtualHost *:80>
-#    ServerAdmin webmaster@dummy-host.example.com
-#    DocumentRoot /www/docs/dummy-host.example.com
-#    ServerName dummy-host.example.com
-#    ErrorLog logs/dummy-host.example.com-error_log
-#    CustomLog logs/dummy-host.example.com-access_log common
-#</VirtualHost>
+<VirtualHost *:{{ http_port }}>
+   ServerAdmin webmaster@dummy-host.example.com
+   DocumentRoot /var/www/html
+   ServerName movabletype.vagrant
+   ErrorLog logs/movabletype-error_log
+   CustomLog logs/movabletype-access_log common
+</VirtualHost>
